@@ -21,25 +21,18 @@ for file in os.listdir():
 
 # input the text as a string literal 
 input_text = input("Search (case-sensitive): ")
-source_bank = [input_text]
+# source_bank = [input_text]
 
 # read each file 
 for file in files:
    f = read_files(file)
    filename = os.path.basename('r' + file)
    curr_filename = os.path.splitext(filename)[0]
+   # write in the filename into the txt document
    with open('duplicated_slides.txt', 'a') as d:
-    for slide in source_bank:
-        print(slide in f)
-        if slide in f:
-            d.write(filename)
-            d.write("\n")
-            print("yay")
-    d.close()
-
-# #iterate via a for loop
-
-
-# #if-else statement
-
-# #if true print name of google slide (array.slice), append to txt file
+      # if the searched input is found in the slide deck, write the filename into the txt document
+      if input_text in f:
+         d.write(filename)
+         d.write("\n")
+         print("yay")
+   d.close()
