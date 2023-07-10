@@ -46,7 +46,7 @@ search = Button(root, text="Search")
 search.pack()
 
 # Define the location of the directory
-path =r"C:\Users\brand\OneDrive\Desktop\Python Files\PyGiScraping"
+path =r"C:\Users\xiaol\OneDrive\Desktop\PyGiScraping"
 files = []
 
 # Change the directory
@@ -65,6 +65,8 @@ for file in os.listdir():
 # print(file_path)
 
 def search_input(): 
+    e = open("duplicated_slides.txt", "w")
+    e.close()
     input = search_entry.get()
     found = False
     for file in files:
