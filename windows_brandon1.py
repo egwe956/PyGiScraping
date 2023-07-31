@@ -7,6 +7,7 @@ root = Tk()
 root.title("GoImpact Duplicate Search Tool")
 root.minsize(200, 200)  # width, height
 root.geometry("800x800+50+50")
+
 #root.iconbitmap(r"C:\Users\brand\OneDrive\Desktop\Python Files\PyGiScraping\GoImpact Logo.ico")
 
 # Create Label in our window
